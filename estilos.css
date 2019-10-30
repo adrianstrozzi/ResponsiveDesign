@@ -1,0 +1,386 @@
+/* !important jerarquía absoluta, no se recomienda su uso */
+/*reglas
+selectores 
+declaraciones 
+propiedades
+valores */
+
+/* selector de etiqueta header - section -article - nav */
+/* regla = es todo --- selector = header */
+/* declaracion = todo entre {} --- propiedad = background --- valor = pink  */
+
+/* Colors  */
+/* HEXDECIMAL -0123456789ABCDEF+ #RRGGBB */
+/* #p1 {background-color: #ff0000;}   red */
+
+/* RGB rgb(red, green, blue) */
+/* #p1 {background-color: rgb(255, 0, 0);}   red */
+
+/* RGBA rgba(red, green, blue, alpha) */
+/* #p1 {background-color: rgba(255, 0, 0, 0.3);}   red with opacity */
+
+/* HSL hsl(hue, saturation, lightness) */
+/* #p1 {background-color: hsl(120, 100%, 50%);}   green */
+
+/* HSLA hsla(hue, saturation, lightness, alpha) */
+/* #p1 {background-color: hsla(120, 100%, 50%, 0.3);}   green with opacity */
+
+
+/* header {                       
+  background: pink;
+  color: red
+} */
+
+/* selector descendente header - section -article - nav */
+
+/* body header div nav ol li a */
+
+/* selector de clase . */
+
+/* .link */
+
+/* selector de id # */
+/* #portafolio  */
+
+/* –gris-oscuro: #1d252c;
+–gris-claro: #626262;
+–background-gris: #1b2127;
+–celeste: #026fff; */
+
+/* tipos de display
+block: el elemento intenta abarcar todo el ancho posible.
+inline: reduce su tamaño exclusivamente hasta lo que abarca su contenido, descartando las propiedades width y height.
+inline-block: combina lo mejor de block e inline, ya que respeta las dimensiones indicadas en las propiedades width y height, pero coloca el elemento en línea (al costado) de elementos hermanos que también tengan display: inline o inline-block.
+flex: asume algunas propiedades por defecto que favorecen la alineación de los elementos internos.
+grid: similar a flex, asume algunas propiedades por defecto organizando los contenidos en filas y columnas.
+none: oculta el elemento. */
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  margin: 0;
+   /*en este caso de izq a der buscará las fuentes designadas y remplaza según sea el caso */
+}
+
+h1,         /* se aplica a 6 h's diferentes */
+h2,
+h3,
+h4,
+h5,
+h6{
+  font-family: 'Fjalla One', sans-serif;
+  font-weight: normal;   /* normal = 400 bold = 600 */
+  /* font-style: italic; */
+}
+
+h1 {
+  font-size: 40px;
+  line-height: 1.5em; /* interlineado vertical */
+  letter-spacing: -.2px;
+  color: white;
+  margin: 0px;
+  /* margin: 100px 520px 70px 30px; */
+   /* espaciado horizontal entre letra y ltrea */
+  /* text-transform: uppercase; min, mayus, etc  */
+  /* text-decoration: underline;  */
+}
+
+h1 strong {
+  color: #026fff;
+}
+
+h2 {
+  color: #026fff;
+  text-transform: uppercase;
+  font-family: 'Fjalla One', sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  margin-bottom: 40px;
+}
+
+.hero {
+  height: 300px;
+  /* background-image: url('../Images/hero.jpg');  */
+  /* url sirve para designar ruta de archivo ../ para salir de carpeta y buscar la de Images */
+  background-color: #1B2127;
+  /* background-size: 500px 300px;  */
+  /* width height */
+  /* background-repeat: no-repeat; */
+  /* background-position-x: right; */
+  display: flex; 
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+.hero-image{
+  object-fit: cover;
+}
+
+.portfolio {
+  background: #fafafa;
+  padding: 20px;
+
+  /* background: red; */
+}
+
+.project {
+  /* border-top: 10px solid red;
+  border-right: 10px solid green;
+  border-left: 10px solid orange;
+  border-bottom: 10px solid pink; */
+  /* color: blue; */
+  /* border-top-color: red;
+  border-width: 15px;
+  border-top-style: solid; */
+  border: 1px solid gray;
+  border-radius: 10px;
+  /* border-top-left-radius: 50px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px; */
+  margin: 10px; /* margen externo al contenedor */
+  margin-bottom: 15px;
+  /* margin-right: 0%;
+  margin-left:
+  margin-top: */
+  padding: 20px; /* margen interno del contenedor, empuja el conteido hacia adentro.  */
+  display: flex;
+  background: white;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.project-course,
+.project-date,
+.project-url {
+ margin: 10px 0px;
+}
+
+.project-description {
+  font-size: 20px;
+}
+
+.project strong {
+  font-family: 'Fjalla One', sans-serif;
+}
+
+/* .project-date {
+  margin: 10px 0px;
+} */
+
+.project-title {
+  font-size: 30px;
+  margin-top: 0px;
+  margin-bottom: 10px;
+
+}
+
+.project-details {
+  width: 500px;
+
+}
+
+.project-imageContainer {
+  width: 500px;
+}
+
+.header {
+  background-color: #1B2127;
+  color: white;
+  display: flex;
+  height: 70px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+figure {
+  margin: 0;
+}
+
+
+.header a {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  height: 90px;
+  justify-content: space-between;
+  /* align-items: center; */
+}
+
+.menu {
+  height: inherit;
+}
+
+.header ol {
+  display: flex;
+  height: inherit;
+  align-items: center;
+}
+
+.header ol li {
+  height: inherit;
+}
+
+.header a {
+  display: flex;
+  align-items: center;
+  height: inherit;
+  padding: 0 10px;
+}
+
+.flexbox {       /* FLEXBOX VIDEO 26 27 28 29 PLATZI IMPORTANTE */
+  display: flex;
+  /* flex-wrap: nowrap; */
+  flex-wrap: wrap;
+  /* flex-direction: row; */
+}
+
+.box {
+  width: 50px;
+  height: 50px;
+  margin: 20px;
+  border: 1px solid red;
+  flex-shrink: 0;
+}
+
+.footer {
+  color: white;
+  background-color: #1b2127;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer img {
+  vertical-align: middle;
+}
+
+.footer a {
+  color: white;
+}
+
+
+.event-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.event-list-title {
+  margin-left: 20px;
+}
+.event {
+  margin: 10px;
+  width: 480px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #f4fbff;
+}
+
+.event img {
+  width: 480px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.event-detail {
+  margin: 20px 40px;
+  margin-top: -40px;
+  background-color: white;
+  position: relative;
+  padding: 20px;
+  text-align: center;
+}
+
+.event-description {
+  text-align: left;
+}
+
+.event-url {
+  color: #056fff;
+  border: 1px solid;
+  padding: 5px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.contact {
+  background-color: #056fff;
+  color: white;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.social {
+}
+
+.social-link {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  margin: 0 10px;
+  background-size: 50px 50px;
+}
+
+.social-link.twitter {
+  background-image: url('../Images/twitter.svg');
+}
+
+.social-link.facebook {
+  background-image: url('../Images/facebook.svg');
+}
+
+.social-link.github {
+  background-image: url('../Images/github.svg');
+}
+
+.social-link.instagram {
+  background-image: url('../Images/instagram.svg');
+}
+
+.form-email input {
+  border-color: gray;
+  border-style: solid;
+  border-radius: 5px;
+  padding: 10px 20px 10px 25px;
+  background-image: url('../Images/envelope.svg');
+  background-size: 15px 15px;
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-position-x: 5px;
+}
+
+.form-email button {
+  display:block;
+  margin-top: 10px;
+  background: transparent;
+  color: white;
+  padding: 10px 0;
+  border-radius: 5px;
+  width: 100px;
+  margin-top: 10px;
+  /* margin: 10px auto 0; */
+}
+
+.form-email h3 {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+ .container {  /*importante para entender como esta clase alinea las seccion y h's de la pagina */
+  width: 1000px;
+  margin: 0 auto;
+  display: inherit;
+  justify-content: inherit;
+  align-items: inherit;
+  height: inherit;
+  flex-wrap: inherit;
+}
