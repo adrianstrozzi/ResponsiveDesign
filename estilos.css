@@ -177,12 +177,12 @@ h2 {
 }
 
 .project-details {
-  width: 500px;
+  width: 50%;
 
 }
 
 .project-imageContainer {
-  width: 500px;
+  width: 50%;
 }
 
 .header {
@@ -279,8 +279,8 @@ figure {
   margin-left: 20px;
 }
 .event {
-  margin: 10px;
-  width: 480px;
+  margin: 1%;
+  width: 48%;
   flex-shrink: 0;
   border-radius: 10px;
   overflow: hidden;
@@ -336,19 +336,19 @@ figure {
 }
 
 .social-link.twitter {
-  background-image: url('../Images/twitter.svg');
+  background-image: url('../ResponsiveDesign/Images/twitter.svg');
 }
 
 .social-link.facebook {
-  background-image: url('../Images/facebook.svg');
+  background-image: url('../ResponsiveDesign/Images/facebook.svg');
 }
 
 .social-link.github {
-  background-image: url('../Images/github.svg');
+  background-image: url('../ResponsiveDesign/Images/github.svg');
 }
 
 .social-link.instagram {
-  background-image: url('../Images/instagram.svg');
+  background-image: url('../ResponsiveDesign/Images/instagram.svg');
 }
 
 .form-email input {
@@ -394,8 +394,8 @@ figure {
 /* DESKTOP FIRST EMPEZAR DESDE EL MEDIA QUERY MAS GRANDE */
 
 @media screen and (max-width: 1024px) {
-  body {
-    /* border: 10px solid green; */
+  .container {
+    padding: 0 1em;
   }
 }
 
@@ -421,11 +421,88 @@ figure {
     text-align: center;
   }
 
+  .project {
+    display: block;
+  }
+
+  .project-imageContainer {
+    width: auto;
+    text-align: center;
+  }
+
+  .project-imageContainer img {
+    max-width: 100%;
+  }
+
+  .project-details {
+    width: auto;
+    /* font-size: 10px; */
+  }
+
+  .project-course, .project-date, .project-url {
+    margin: .3em 0;
+  }
+
+  .project-title {
+    font-size:  1.5em;
+    margin-bottom: .3em;
+  }
+
+  .project-url {
+    font-size: 1em;       
+  }
+
+  .project-course {
+    font-size: .7em;
+  }
+
+  .project-date {
+    font-size: 1em;
+  }
+
+  .project-description {
+    font-size: .8em;
+  }
+
+  .event {
+    width: auto;
+    flex-shrink: initial;
+  }
+
+  .event img {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 480px) {
-  body {
-    /* border: 10px solid green; */
+  .project-details {
+    font-size: 12px;
+  }
+
+  .event-detail {
+    margin: -2em .5em .5em;
+    padding: 1em;
+  }
+
+  .contact {
+    height: auto;
+    padding: 1.5em 0;
+    text-align: center;
+    display: block;
+  }
+
+  .form-email button {
+    margin: 1em auto;
+  }
+
+  .form-email h3 {
+    margin-top: 0;
+  }
+
+  .footer {
+    display: block;
+    text-align: center;
+    border: 1px solid transparent;
   }
 }
 
