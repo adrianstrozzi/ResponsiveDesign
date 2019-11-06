@@ -444,6 +444,10 @@ figure {
 /* DESKTOP FIRST EMPEZAR DESDE EL MEDIA QUERY MAS GRANDE */
 
 @media screen and (max-width: 1024px) {
+
+  .portfolio {
+    padding: 0;
+  }
   .container {
     padding: 0 1em;
   }

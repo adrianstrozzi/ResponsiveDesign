@@ -186,9 +186,12 @@
         const burgerButton = document.querySelector('#burger-menu');
         // console.log(burgerButton);
 
-        burgerButton.addEventListener('click', hideShow)
+        ipad.addListener(validation);
 
-        ipad.addListener(validation)
+        // if (ipad.matches) {
+        //     burgerButton.addEventListener('click', hideShow)
+        //     menu.addEventListener('click', hideShow);
+        // }
 
         function validation(event) {
             if (event.matches) {
@@ -197,6 +200,7 @@
                 burgerButton.removeEventListener('click', hideShow)
             }
          }
+        validation(ipad);
         
         function hideShow() {
             if (menu.classList.contains('is-active')) {
